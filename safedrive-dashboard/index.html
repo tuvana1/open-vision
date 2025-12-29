@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDrive Vision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">SafeDrive</div>
+        <div class="nav-links">
+            <a href="#problem">Problem</a>
+            <a href="#demo">Demo</a>
+            <a href="#insights">Insights</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                See the road<br><span class="highlight">like never before.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Real-time lane and vehicle detection using computer vision.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value" data-target="94">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Crashes from human error</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="5273">0</span>
+                    <span class="stat-label">Vehicles detected</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="15">0</span><span class="stat-suffix">fps</span>
+                    <span class="stat-label">Processing speed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-problem" id="problem">
+        <div class="section-header">
+            <h2 class="section-title">The problem</h2>
+        </div>
+
+        <div class="problem-grid">
+            <div class="comparison-card">
+                <h3 class="card-title">Perception gap</h3>
+                <div class="comparison-visual">
+                    <div class="comparison-row">
+                        <div class="comparison-label">Human</div>
+                        <div class="comparison-bar">
+                            <div class="bar-fill human-bar" style="--target-width: 25%"></div>
+                        </div>
+                        <div class="comparison-value">3-4 objects</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-label">CV</div>
+                        <div class="comparison-bar">
+                            <div class="bar-fill cv-bar" style="--target-width: 100%"></div>
+                        </div>
+                        <div class="comparison-value">15+ objects</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <h3 class="card-title">NHTSA data</h3>
+                <div class="pie-chart-container">
+                    <div class="pie-chart">
+                        <div class="pie-center">
+                            <span class="pie-value">94%</span>
+                            <span class="pie-label">Human error</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gap-card">
+                <h3 class="card-title">Cost gap</h3>
+                <div class="gap-visual">
+                    <div class="gap-item">
+                        <span class="gap-price">$60,000+</span>
+                        <span class="gap-label">Tesla Autopilot</span>
+                    </div>
+                    <div class="gap-item">
+                        <span class="gap-price">$2,000+</span>
+                        <span class="gap-label">Aftermarket ADAS</span>
+                    </div>
+                    <div class="gap-item featured">
+                        <span class="gap-price">$0</span>
+                        <span class="gap-label">SafeDrive Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-demo" id="demo">
+        <div class="section-header">
+            <h2 class="section-title">Demo</h2>
+        </div>
+
+        <div class="case-selector">
+            <button class="case-btn active" data-video="assets/video/annotated.mp4">#1</button>
+            <button class="case-btn" data-video="assets/video/case2.mp4">#2</button>
+            <button class="case-btn" data-video="assets/video/case3.mp4">#3</button>
+        </div>
+
+        <div class="demo-container">
+            <div class="video-player">
+                <div class="video-wrapper">
+                    <video id="demoVideo" controls playsinline>
+                        <source src="assets/video/annotated.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-insights" id="insights">
+        <div class="section-header">
+            <h2 class="section-title">Insights</h2>
+        </div>
+
+        <div class="insights-grid">
+            <div class="insight-card">
+                <h3 class="insight-title">Detection vs Value</h3>
+                <div class="insight-chart">
+                    <div class="chart-bar-group">
+                        <div class="chart-label">Accuracy</div>
+                        <div class="chart-bar">
+                            <div class="chart-fill high" style="width: 95%"></div>
+                        </div>
+                        <span class="chart-value">95%</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-label">User trust</div>
+                        <div class="chart-bar">
+                            <div class="chart-fill low" style="width: 20%"></div>
+                        </div>
+                        <span class="chart-value">20%</span>
+                    </div>
+                </div>
+                <p class="insight-text">
+                    Optimized for low false positives over maximum coverage.
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <h3 class="insight-title">Context matters</h3>
+                <div class="insight-chart">
+                    <div class="chart-bar-group">
+                        <div class="chart-label">Daylight</div>
+                        <div class="chart-bar">
+                            <div class="chart-fill high" style="width: 95%"></div>
+                        </div>
+                        <span class="chart-value">95%</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-label">Shadows</div>
+                        <div class="chart-bar">
+                            <div class="chart-fill medium" style="width: 67%"></div>
+                        </div>
+                        <span class="chart-value">67%</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-label">Night</div>
+                        <div class="chart-bar">
+                            <div class="chart-fill low" style="width: 45%"></div>
+                        </div>
+                        <span class="chart-value">45%</span>
+                    </div>
+                </div>
+                <p class="insight-text">
+                    Production requires sensor fusion.
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <h3 class="insight-title">Speed vs accuracy</h3>
+                <div class="insight-chart">
+                    <div class="model-compare">
+                        <div class="model-item">
+                            <span class="model-name">YOLOv8n</span>
+                            <span class="model-stats">45ms · 37 mAP</span>
+                        </div>
+                        <div class="model-item alt">
+                            <span class="model-name">YOLOv8x</span>
+                            <span class="model-stats">280ms · 54 mAP</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="insight-text">
+                    Nano model: 6x faster, good enough for real-time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/yourusername/safedrive-vision" class="footer-link">GitHub</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+            </div>
+            <p class="footer-copyright">SafeDrive Vision</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
