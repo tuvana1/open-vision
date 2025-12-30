@@ -1,11 +1,12 @@
-# SafeDrive Vision
+# Open Vision
 
-Real-time lane and vehicle detection using computer vision. Processes dashcam footage to identify lane markings (Canny + Hough) and vehicles (YOLOv8).
+Real-time lane and vehicle detection using computer vision. Processes dashcam footage to identify lane markings and vehicles.
 
 ## Installation
 
 ```bash
-cd safedrive-vision
+git clone https://github.com/tuvana1/open-vision.git
+cd open-vision
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -14,10 +15,10 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py uploads/dashcam.mp4
+python main.py path/to/dashcam.mp4
 ```
 
-Output saved to `outputs/annotated_dashcam.mp4`
+Output saved to `outputs/`
 
 ## Output
 
@@ -37,7 +38,3 @@ Output saved to `outputs/annotated_dashcam.mp4`
 - ~15 FPS on MacBook Pro M1
 - 95% lane detection in good lighting
 - <5% false positive rate on vehicles
-
-## Demo
-
-[Live dashboard](https://safedrive-vision.vercel.app)
